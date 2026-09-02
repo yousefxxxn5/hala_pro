@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006C35" />
+      <stop offset="50%" stop-color="#0B8457" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="slateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <linearGradient id="lightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#006C35" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background for standalone viewing -->
+  <rect width="800" height="800" fill="#FFFFFF" rx="32" />
+
+  <!-- Geometric Saudi Architectural Emblem (هلا / H / Digital Portal) -->
+  <g transform="translate(400, 310)" filter="url(#subtleShadow)">
+    <!-- Back Architectural Ribbon (Slate) -->
+    <path d="M -75,40 L -75,-60 C -75,-125 0,-175 0,-175 C 0,-175 75,-125 75,-60 L 75,40 C 75,60 60,75 40,75 L 15,75 L 15,40 L 45,40 L 45,-55 C 45,-95 0,-130 0,-130 C 0,-130 -45,-95 -45,-55 L -45,40 L -15,40 L -15,75 L -40,75 C -60,75 -75,60 -75,40 Z" 
+          fill="url(#slateGrad)" opacity="0.95" />
+    
+    <!-- Front Dynamic Ribbon (Saudi Emerald Green) -->
+    <path d="M -55,60 C -95,60 -125,20 -125,-25 C -125,-75 -85,-115 -35,-115 C 5,-115 35,-95 50,-70 L 20,-50 C 10,-68 -10,-82 -35,-82 C -65,-82 -92,-55 -92,-25 C -92,8 -68,28 -35,28 C 0,28 30,-2 65,-55 C 85,-85 120,-105 155,-70 C 185,-40 175,10 145,55 L 120,30 C 140,-5 145,-30 130,-48 C 112,-65 92,-48 78,-25 C 48,22 5,60 -55,60 Z" 
+          fill="url(#emeraldGrad)" />
+
+    <!-- Core Tech Dot / Saudi Star Node -->
+    <circle cx="0" cy="115" r="16" fill="url(#emeraldGrad)" />
+  </g>
+
+  <!-- Arabic Typography: هلا سيستم -->
+  <text x="400" y="560" 
+        font-family="'IBM Plex Sans Arabic', 'Tajawal', 'Segoe UI', 'Arial', sans-serif" 
+        font-size="64" 
+        font-weight="900" 
+        text-anchor="middle" 
+        fill="#0F172A" 
+        letter-spacing="1">
+    هلا سيستم
+  </text>
+
+  <!-- English Typography: HALA SYSTEMS -->
+  <text x="400" y="625" 
+        font-family="'Inter', 'Montserrat', 'Segoe UI', 'Arial', sans-serif" 
+        font-size="28" 
+        font-weight="800" 
+        text-anchor="middle" 
+        fill="#006C35" 
+        letter-spacing="9">
+    HALA SYSTEMS
+  </text>
+
+  <!-- Subtitle Tagline -->
+  <text x="400" y="665" 
+        font-family="'IBM Plex Sans Arabic', 'Tajawal', sans-serif" 
+        font-size="16" 
+        font-weight="600" 
+        text-anchor="middle" 
+        fill="#64748B" 
+        letter-spacing="2">
+    حلول وأنظمة برمجية متكاملة • ENTERPRISE SOLUTIONS
+  </text>
+</svg>
