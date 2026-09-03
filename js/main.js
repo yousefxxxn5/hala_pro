@@ -52,13 +52,20 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (targetId === '#' || !targetId) return;
+
+      if (targetId === '#hero') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
       const target = document.querySelector(targetId);
       if (target) {
-        const navbarHeight = navbar.offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+        const navbarHeight = navbar ? navbar.offsetHeight : 70;
+        const targetContainer = target.querySelector('.container') || target;
+        const targetPosition = targetContainer.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
         window.scrollTo({
-          top: targetPosition,
+          top: Math.max(0, targetPosition),
           behavior: 'smooth'
         });
 
