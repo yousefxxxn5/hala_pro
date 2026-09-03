@@ -238,4 +238,278 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ─── 10. True Seamless Infinite Projects Carousel ───
+  const carouselTrack = document.getElementById('projCarouselTrack');
+  const carouselViewport = document.getElementById('projCarouselViewport');
+  const prevBtn = document.getElementById('projPrevBtn');
+  const nextBtn = document.getElementById('projNextBtn');
+  const filterBtns = document.querySelectorAll('.proj-filter-btn');
+
+  if (carouselTrack && carouselViewport) {
+    let projAutoPlayTimer = null;
+    let projIsAnimating = false;
+
+    function getProjStep() {
+      const card = carouselTrack.querySelector('.project-carousel-card');
+      if (!card) return 0;
+      const gap = 26;
+      return card.offsetWidth + gap;
+    }
+
+    function nextSlide() {
+      if (projIsAnimating) return;
+      const step = getProjStep();
+      if (!step) return;
+
+      projIsAnimating = true;
+      carouselTrack.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+      carouselTrack.style.transform = 'translateX(' + step + 'px)';
+
+      setTimeout(function () {
+        const firstCard = carouselTrack.firstElementChild;
+        if (firstCard) {
+          carouselTrack.appendChild(firstCard);
+        }
+        carouselTrack.style.transition = 'none';
+        carouselTrack.style.transform = 'translateX(0)';
+        projIsAnimating = false;
+      }, 650);
+    }
+
+    function prevSlide() {
+      if (projIsAnimating) return;
+      const step = getProjStep();
+      if (!step) return;
+
+      projIsAnimating = true;
+      const lastCard = carouselTrack.lastElementChild;
+      if (lastCard) {
+        carouselTrack.insertBefore(lastCard, carouselTrack.firstElementChild);
+      }
+      carouselTrack.style.transition = 'none';
+      carouselTrack.style.transform = 'translateX(' + step + 'px)';
+
+      // Force reflow
+      void carouselTrack.offsetHeight;
+
+      carouselTrack.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+      carouselTrack.style.transform = 'translateX(0)';
+
+      setTimeout(function () {
+        projIsAnimating = false;
+      }, 650);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        nextSlide();
+        resetProjAutoPlay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        prevSlide();
+        resetProjAutoPlay();
+      });
+    }
+
+    // Filter Buttons
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        const allCards = carouselTrack.querySelectorAll('.project-carousel-card');
+
+        allCards.forEach(function (card) {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        resetProjAutoPlay();
+      });
+    });
+
+    function startProjAutoPlay() {
+      if (projAutoPlayTimer) clearInterval(projAutoPlayTimer);
+      projAutoPlayTimer = setInterval(nextSlide, 3600);
+    }
+
+    function resetProjAutoPlay() {
+      if (projAutoPlayTimer) clearInterval(projAutoPlayTimer);
+      startProjAutoPlay();
+    }
+
+    carouselViewport.addEventListener('mouseenter', function () {
+      if (projAutoPlayTimer) clearInterval(projAutoPlayTimer);
+    });
+
+    carouselViewport.addEventListener('mouseleave', function () {
+      startProjAutoPlay();
+    });
+
+    // Touch & Drag Support
+    let projStartX = 0;
+    let projIsDragging = false;
+
+    carouselViewport.addEventListener('touchstart', function (e) {
+      projStartX = e.touches[0].clientX;
+      projIsDragging = true;
+      if (projAutoPlayTimer) clearInterval(projAutoPlayTimer);
+    }, { passive: true });
+
+    carouselViewport.addEventListener('touchmove', function (e) {
+      if (!projIsDragging) return;
+      const currentX = e.touches[0].clientX;
+      const diffX = currentX - projStartX;
+
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          prevSlide();
+        } else {
+          nextSlide();
+        }
+        projIsDragging = false;
+      }
+    }, { passive: true });
+
+    carouselViewport.addEventListener('touchend', function () {
+      projIsDragging = false;
+      startProjAutoPlay();
+    });
+
+    startProjAutoPlay();
+  }
+
+  // ─── 11. True Seamless Infinite Partners Carousel ───
+  const partnerTrack = document.getElementById('partnerCarouselTrack');
+  const partnerViewport = document.getElementById('partnerCarouselViewport');
+  const partnerPrevBtn = document.getElementById('partnerPrevBtn');
+  const partnerNextBtn = document.getElementById('partnerNextBtn');
+
+  if (partnerTrack && partnerViewport) {
+    let partnerAutoPlayTimer = null;
+    let partnerIsAnimating = false;
+
+    function getPartnerStep() {
+      const card = partnerTrack.querySelector('.partner-carousel-card');
+      if (!card) return 0;
+      const gap = 20;
+      return card.offsetWidth + gap;
+    }
+
+    function nextPartnerSlide() {
+      if (partnerIsAnimating) return;
+      const step = getPartnerStep();
+      if (!step) return;
+
+      partnerIsAnimating = true;
+      partnerTrack.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+      partnerTrack.style.transform = 'translateX(' + step + 'px)';
+
+      setTimeout(function () {
+        const firstCard = partnerTrack.firstElementChild;
+        if (firstCard) {
+          partnerTrack.appendChild(firstCard);
+        }
+        partnerTrack.style.transition = 'none';
+        partnerTrack.style.transform = 'translateX(0)';
+        partnerIsAnimating = false;
+      }, 650);
+    }
+
+    function prevPartnerSlide() {
+      if (partnerIsAnimating) return;
+      const step = getPartnerStep();
+      if (!step) return;
+
+      partnerIsAnimating = true;
+      const lastCard = partnerTrack.lastElementChild;
+      if (lastCard) {
+        partnerTrack.insertBefore(lastCard, partnerTrack.firstElementChild);
+      }
+      partnerTrack.style.transition = 'none';
+      partnerTrack.style.transform = 'translateX(' + step + 'px)';
+
+      // Force reflow
+      void partnerTrack.offsetHeight;
+
+      partnerTrack.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+      partnerTrack.style.transform = 'translateX(0)';
+
+      setTimeout(function () {
+        partnerIsAnimating = false;
+      }, 650);
+    }
+
+    if (partnerNextBtn) {
+      partnerNextBtn.addEventListener('click', function () {
+        nextPartnerSlide();
+        resetPartnerAutoPlay();
+      });
+    }
+
+    if (partnerPrevBtn) {
+      partnerPrevBtn.addEventListener('click', function () {
+        prevPartnerSlide();
+        resetPartnerAutoPlay();
+      });
+    }
+
+    function startPartnerAutoPlay() {
+      if (partnerAutoPlayTimer) clearInterval(partnerAutoPlayTimer);
+      partnerAutoPlayTimer = setInterval(nextPartnerSlide, 2800);
+    }
+
+    function resetPartnerAutoPlay() {
+      if (partnerAutoPlayTimer) clearInterval(partnerAutoPlayTimer);
+      startPartnerAutoPlay();
+    }
+
+    partnerViewport.addEventListener('mouseenter', function () {
+      if (partnerAutoPlayTimer) clearInterval(partnerAutoPlayTimer);
+    });
+
+    partnerViewport.addEventListener('mouseleave', function () {
+      startPartnerAutoPlay();
+    });
+
+    // Touch & Drag Support
+    let partnerStartX = 0;
+    let partnerIsDragging = false;
+
+    partnerViewport.addEventListener('touchstart', function (e) {
+      partnerStartX = e.touches[0].clientX;
+      partnerIsDragging = true;
+      if (partnerAutoPlayTimer) clearInterval(partnerAutoPlayTimer);
+    }, { passive: true });
+
+    partnerViewport.addEventListener('touchmove', function (e) {
+      if (!partnerIsDragging) return;
+      const currentX = e.touches[0].clientX;
+      const diffX = currentX - partnerStartX;
+
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          prevPartnerSlide();
+        } else {
+          nextPartnerSlide();
+        }
+        partnerIsDragging = false;
+      }
+    }, { passive: true });
+
+    partnerViewport.addEventListener('touchend', function () {
+      partnerIsDragging = false;
+      startPartnerAutoPlay();
+    });
+
+    startPartnerAutoPlay();
+  }
+
 });

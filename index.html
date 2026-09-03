@@ -33,6 +33,35 @@
 <body>
 
   <!-- ═══════════════════════════════════════════
+       0. PAGE PRELOADER (Ultra-Modern 3D Intro)
+       ═══════════════════════════════════════════ -->
+  <div id="page-preloader" class="page-preloader" aria-hidden="true">
+    <!-- Ambient Background Lighting -->
+    <div class="preloader-ambient-glow"></div>
+
+    <div class="preloader-content">
+      <!-- 3D Orbital Rings & Holographic Logo -->
+      <div class="preloader-orbit-system">
+        <div class="orbit-ring orbit-ring-outer"></div>
+        <div class="orbit-ring orbit-ring-inner"></div>
+        <div class="preloader-core-halo"></div>
+
+        <div class="preloader-logo-3d">
+          <img src="assets/الشعار.png" alt="شعار هلا سيستم" class="preloader-brand-img">
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="preloader-text-system">
+        <div class="preloader-title-row">
+          <span class="preloader-brand-title">هلا سيستم</span>
+          <span class="preloader-brand-sub">HALA SYSTEMS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
        1. NAVBAR
        ═══════════════════════════════════════════ -->
   <nav class="navbar" id="navbar">
@@ -185,55 +214,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       3. STATS COUNTER
-       ═══════════════════════════════════════════ -->
-  <section class="stats" id="stats">
-    <div class="container">
-      <div class="stat-item animate-on-scroll">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-          </svg>
-        </div>
-        <div class="stat-number" data-count="200" data-suffix="+">0</div>
-        <div class="stat-label">عميل ومؤسسة</div>
-      </div>
-      <div class="stat-item animate-on-scroll delay-1">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-            <line x1="8" y1="21" x2="16" y2="21" />
-            <line x1="12" y1="17" x2="12" y2="21" />
-          </svg>
-        </div>
-        <div class="stat-number" data-count="350" data-suffix="+">0</div>
-        <div class="stat-label">نظام ومشروع مُنجز</div>
-      </div>
-      <div class="stat-item animate-on-scroll delay-2">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-          </svg>
-        </div>
-        <div class="stat-number" data-count="98" data-suffix="%">0</div>
-        <div class="stat-label">نسبة رضا العملاء</div>
-      </div>
-      <div class="stat-item animate-on-scroll delay-3">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-        </div>
-        <div class="stat-number" data-count="10" data-suffix="+">0</div>
-        <div class="stat-label">سنوات من الخبرة</div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ═══════════════════════════════════════════
@@ -241,9 +221,8 @@
        ═══════════════════════════════════════════ -->
   <section class="about" id="about">
     <div class="container">
-      <div class="about-logo-card animate-on-scroll">
-        <img src="assets/الشعار.png" alt="شعار هلا سيستم">
-        <p>هلا سيستم — HALA SYSTEMS<br>للأنظمة والحلول البرمجية المتكاملة</p>
+      <div class="about-image-card animate-on-scroll">
+        <img src="الصوره الجانبيه.jpg" alt="فريق عمل هلا سيستم للأنظمة البرمجية وحلول التحول الرقمي">
       </div>
 
       <div class="about-content">
@@ -305,7 +284,7 @@
   <!-- ═══════════════════════════════════════════
        5. VISION & MISSION
        ═══════════════════════════════════════════ -->
-  <section class="vision-mission" id="vision-mission">
+  <!-- <section class="vision-mission" id="vision-mission">
     <div class="bg-image"
       style="background-image: linear-gradient(135deg, rgba(0, 108, 53, 0.3), rgba(10, 20, 14, 0.9));"></div>
     <div class="container">
@@ -343,7 +322,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- ═══════════════════════════════════════════
@@ -352,132 +331,432 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <div class="section-label">أنظمتنا وحلولنا</div>
-        <h2 class="section-title">باقة متكاملة من الأنظمة<br>البرمجية الاحترافية</h2>
-        <p class="section-subtitle">نقدم مجموعة شاملة من الحلول البرمجية المصممة خصيصاً لتلبية احتياجات السوق السعودي
-          بأعلى المعايير العالمية.</p>
+        <div class="section-label">مشاريعنا وأنظمتنا</div>
+        <h2 class="section-title">باقة متكاملة من الأنظمة البرمجية<br>والمشاريع التخصصية</h2>
+        <p class="section-subtitle">نفخر بتطوير وتقديم مشاريع وأنظمة برمجية سحابية متقدمة مصممة خصيصاً لتلبية متطلبات السوق السعودي بأعلى المعايير العالمية.</p>
       </div>
 
-      <div class="services-grid">
-        <!-- Service 1: ERP -->
-        <div class="service-card animate-on-scroll">
-          <div class="service-card-image"
-            style="background: linear-gradient(135deg, #006C35, #0B8457); display: flex; align-items: center; justify-content: center;">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" opacity="0.9">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-              <line x1="8" y1="21" x2="16" y2="21" />
-              <line x1="12" y1="17" x2="12" y2="21" />
-              <path d="M6 8h4M6 11h8" />
-            </svg>
-          </div>
-          <div class="service-card-banner">
-            <h3>نظام إدارة الموارد ERP</h3>
-          </div>
-          <div class="service-card-body">
-            <p>نظام متكامل لإدارة جميع عمليات الشركة من المحاسبة والمخازن والمشتريات والمبيعات والموارد البشرية في منصة
-              سحابية واحدة وموحدة.</p>
-            <a href="#contact" class="btn btn-outline">طلب عرض سعر</a>
+      <!-- Interactive Projects Carousel -->
+      <div class="projects-carousel-wrapper animate-on-scroll">
+        <!-- Filter Pills Centered -->
+        <div class="projects-carousel-nav">
+          <div class="projects-filter-pills" id="projFilterPills">
+            <button class="proj-filter-btn active" data-filter="all">جميع المشاريع</button>
+            <button class="proj-filter-btn" data-filter="medical">قطاع الرعاية الطبية</button>
+            <button class="proj-filter-btn" data-filter="realestate">التطوير العقاري</button>
+            <button class="proj-filter-btn" data-filter="education">المؤسسات التعليمية</button>
+            <button class="proj-filter-btn" data-filter="enterprise">الشركات وERP</button>
           </div>
         </div>
 
-        <!-- Service 2: E-invoicing ZATCA -->
-        <div class="service-card animate-on-scroll delay-1">
-          <div class="service-card-image"
-            style="background: linear-gradient(135deg, #0B8457, #10B981); display: flex; align-items: center; justify-content: center;">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" opacity="0.9">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="16" y1="13" x2="8" y2="13" />
-              <line x1="16" y1="17" x2="8" y2="17" />
-              <polyline points="10 9 9 9 8 9" />
-            </svg>
-          </div>
-          <div class="service-card-banner">
-            <h3>الفوترة الإلكترونية ZATCA</h3>
-          </div>
-          <div class="service-card-body">
-            <p>نظام فوترة إلكترونية معتمد ومتوافق بالكامل مع متطلبات هيئة الزكاة والضريبة والجمارك (مرحلة الربط والتكامل
-              - Phase 2) مع تشفير QR Code.</p>
-            <a href="#contact" class="btn btn-outline">طلب عرض سعر</a>
+        <!-- Navigation Arrows on Both Sides -->
+        <button class="carousel-side-arrow prev" id="projPrevBtn" aria-label="المشروع السابق">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="carousel-side-arrow next" id="projNextBtn" aria-label="المشروع التالي">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <!-- Carousel Viewport & Track -->
+        <div class="projects-carousel-viewport" id="projCarouselViewport">
+          <div class="projects-carousel-track" id="projCarouselTrack">
+            
+            <!-- Project 1: Hospital & Healthcare -->
+            <div class="project-carousel-card" data-category="medical">
+              <div class="proj-card-visual">
+                <img src="assets/projects/hospital.jpg" alt="نظام إدارة المستشفيات والمراكز الطبية" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot"></span> معتمد نفيس NPHIES
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" />
+                    <path d="M9 10h6M12 7v6" />
+                    <path d="M9 17h2M13 17h2" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala HIS</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">🏥 الرعاية الصحية والمستشفيات</span>
+                  <h4 class="proj-card-title">نظام إدارة المستشفيات والمراكز الطبية</h4>
+                  <p class="proj-card-desc">منظومة صحية شاملة لإدارة العيادات، التنويم، المختبرات، الصيدلية، والمطالبات التأمينية مع ربط معتمد بمنصة نفيس.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      ملف إلكتروني موحد للمريض (EMR)
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      الربط المباشر مع منصة نفيس والتأمين
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      إدارة الصيدلية والوصفات الطبية
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2: Real Estate & Property Management -->
+            <div class="project-carousel-card" data-category="realestate">
+              <div class="proj-card-visual">
+                <img src="assets/projects/realestate.jpg" alt="نظام إدارة الأملاك والمشاريع العقارية" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot" style="background:#fbbf24;box-shadow:0 0 6px #fbbf24;"></span> متوافق مع منصة إيجار
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M3 21h18M6 21V9l6-5 6 5v12" />
+                    <path d="M9 13h2M13 13h2M9 17h2M13 17h2" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala Aqar</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">🏢 العقارات والأملاك</span>
+                  <h4 class="proj-card-title">نظام إدارة الأملاك والمشاريع العقارية</h4>
+                  <p class="proj-card-desc">إدارة احترافية للوحدات السكنية والتجارية، عقود الإيجار الرقمية، التحصيل المالي، وجدولة الصيانة والمستأجرين.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      تكامل مباشر مع منصة إيجار (Ejar)
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      عقود إلكترونية وتحصيل آلي ذكي
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      تتبع طلبات الصيانة وإشغال الوحدات
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3: School & Education Management -->
+            <div class="project-carousel-card" data-category="education">
+              <div class="proj-card-visual">
+                <img src="assets/projects/school.jpg" alt="نظام إدارة المدارس والمجمعات التعليمية" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot" style="background:#60a5fa;box-shadow:0 0 6px #60a5fa;"></span> بوابة نور والقبول الذكي
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala School</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">🎓 التعليم والمؤسسات الأكاديمية</span>
+                  <h4 class="proj-card-title">نظام إدارة المدارس والمجمعات التعليمية</h4>
+                  <p class="proj-card-desc">منصة تعليمية وإدارية ذكية تربط الإدارة والكوادر التدريسية وأولياء الأمور مع متابعة الدرجات والأقساط.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      بوابة إلكترونية تفاعلية لأولياء الأمور
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      رصد الحضور الذكي والغياب اللحظي
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      إدارة الرسوم المدرسية والأقساط
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 4: Pharmacy Management (New) -->
+            <div class="project-carousel-card" data-category="medical">
+              <div class="proj-card-visual">
+                <img src="assets/projects/pharma.jpg" alt="نظام إدارة الصيدليات وسلاسل الدواء" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot" style="background:#38bdf8;box-shadow:0 0 6px #38bdf8;"></span> ربط منصة رصد
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" />
+                    <path d="M8.5 8.5l7 7" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala Pharma</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">💊 قطاع الصيدلة والمستودعات الدوائية</span>
+                  <h4 class="proj-card-title">نظام إدارة الصيدليات وسلاسل الدواء</h4>
+                  <p class="proj-card-desc">إدارة شاملة للمبيعات الصيدلانية، التتبع الدوائي لمنصة رصد، تواريخ الصلاحية، وصرف الوصفات التأمينية.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      ربط معتمد مع منصة رصد وهيئة الغذاء
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      تتبع تواريخ الصلاحية والباركود الدوائي
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      صرف مطالبات التأمين الطبي الإلكتروني
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 5: ERP Enterprise -->
+            <div class="project-carousel-card" data-category="enterprise">
+              <div class="proj-card-visual">
+                <img src="assets/projects/erp.jpg" alt="نظام تخطيط الموارد المؤسسية الشامل ERP" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot"></span> سحابي متعدد الفروع
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala ERP</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">⚙️ الشركات والمؤسسات</span>
+                  <h4 class="proj-card-title">نظام تخطيط الموارد المؤسسية الشامل (ERP)</h4>
+                  <p class="proj-card-desc">ربط مركزي لجميع عمليات المنشأة: الحسابات العامة، المخازن والمستودعات، المشتريات، والموارد البشرية (HR).</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      محاسبة مالية وشجرة حسابات متقدمة
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      إدارة المستودعات بنظام الباركود
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      شؤون موظفين وكشوف رواتب مسيرات
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 6: HR & Payroll (New) -->
+            <div class="project-carousel-card" data-category="enterprise">
+              <div class="proj-card-visual">
+                <img src="assets/projects/hr.jpg" alt="نظام إدارة الموارد البشرية وحماية الأجور" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot" style="background:#818cf8;box-shadow:0 0 6px #818cf8;"></span> متوافق مع نظام مدد وقوى
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala HR</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">👥 الموارد البشرية وشؤون الموظفين</span>
+                  <h4 class="proj-card-title">نظام إدارة الموارد البشرية وحماية الأجور</h4>
+                  <p class="proj-card-desc">أتمتة شؤون الموظفين، مسيرات الرواتب عبر نظام حماية الأجور (WPS)، الحضور الذكي بالـ GPS، وإدارة الإجازات.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      متوافق مع حماية الأجور ومنصة مدد
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      حضور وانصراف ذكي عبر تطبيق الجوال
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      إدارة الإجازات والتقييم السنوي
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 7: ZATCA E-Invoicing Phase 2 -->
+            <div class="project-carousel-card" data-category="enterprise">
+              <div class="proj-card-visual">
+                <img src="assets/projects/zatca.jpg" alt="منظومة الفوترة الإلكترونية والربط الضريبي" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot"></span> معتمد 100% ZATCA
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala ZATCA</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">⚖️ المالية والامتثال الضريبي</span>
+                  <h4 class="proj-card-title">منظومة الفوترة الإلكترونية والربط الضريبي</h4>
+                  <p class="proj-card-desc">تكامل سحابي فوري مع هيئة الزكاة والضريبة والجمارك (المرحلة 2) مع توليد وتشفير الفواتير ورمز الاستجابة السريع.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      ربط API معتمد مع بوابة فاتورة
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      فواتير ضريبية ومبسطة مشفرة فورياً
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      أرشفة سحابية آمنة وتقارير إقرارات
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 8: POS & Restaurants -->
+            <div class="project-carousel-card" data-category="enterprise">
+              <div class="proj-card-visual">
+                <img src="assets/projects/pos.jpg" alt="نظام نقاط البيع وإدارة المطاعم والكافيهات" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot" style="background:#f97316;box-shadow:0 0 6px #f97316;"></span> يعمل أوفلاين وأونلاين
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="13" rx="2" />
+                    <path d="M6 8h4M6 11h2M14 8h4M14 11h4" />
+                    <path d="M2 17h20v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2z" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala POS</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">☕ التجزئة والمطاعم والكافيهات</span>
+                  <h4 class="proj-card-title">نظام نقاط البيع وإدارة المطاعم والكافيهات</h4>
+                  <p class="proj-card-desc">نقطة بيع سحابية ذكية تدعم شاشات المطابخ (KDS)، المدفوعات السريعة (مدى وApple Pay)، وإدارة الطاولات والمخزون.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      شاشة مطابخ ذكية KDS وأجهزة المطبخ
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      دفع إلكتروني متكامل (مدى وApple Pay)
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      جرد تلقائي لحظي للمخزون والمواد
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 9: Waqf & Non-profit (New) -->
+            <div class="project-carousel-card" data-category="enterprise">
+              <div class="proj-card-visual">
+                <img src="assets/projects/waqf.jpg" alt="منصة إدارة الجمعيات الخيرية ومشاريع الأوقاف" class="proj-card-img" loading="lazy">
+                <div class="proj-card-overlay"></div>
+                <div class="proj-card-badge">
+                  <span class="badge-dot" style="background:#4ade80;box-shadow:0 0 6px #4ade80;"></span> حوكمة القطاع غير الربحي
+                </div>
+                <div class="proj-card-icon-wrap">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                  </svg>
+                </div>
+                <span class="proj-card-code">Hala Waqf</span>
+              </div>
+              <div class="proj-card-body">
+                <div>
+                  <span class="proj-card-sector">🤝 الجمعيات والمؤسسات غير الربحية</span>
+                  <h4 class="proj-card-title">منصة إدارة الجمعيات الخيرية ومشاريع الأوقاف</h4>
+                  <p class="proj-card-desc">حل سحابي متطور لإدارة التبرعات الرقمية، الكفالات، ملفات المستفيدين، الحوكمة المالية، وإصدار التقارير الرقابية.</p>
+                  <ul class="proj-card-features">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      بوابات دفع التبرعات الإلكترونية الآمنة
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      إدارة ملفات المستفيدين والكفالات
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      حوكمة المصروفات والتقارير الرقابية
+                    </li>
+                  </ul>
+                </div>
+                <a href="#contact" class="proj-card-action">
+                  <span>طلب تجربة النظام</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Service 3: POS -->
-        <div class="service-card animate-on-scroll delay-2">
-          <div class="service-card-image"
-            style="background: linear-gradient(135deg, #C5A059, #D4AF37); display: flex; align-items: center; justify-content: center;">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" opacity="0.9">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-              <line x1="1" y1="10" x2="23" y2="10" />
-            </svg>
-          </div>
-          <div class="service-card-banner">
-            <h3>نقاط البيع POS</h3>
-          </div>
-          <div class="service-card-body">
-            <p>نظام نقاط بيع سحابي سريع وذكي يدعم الباركود والمدفوعات الإلكترونية (مدى، Apple Pay) مع ربط مباشر بالمخزون
-              والفوترة الإلكترونية.</p>
-            <a href="#contact" class="btn btn-outline">طلب عرض سعر</a>
-          </div>
-        </div>
-
-        <!-- Service 4: Mobile Apps -->
-        <div class="service-card animate-on-scroll delay-1">
-          <div class="service-card-image"
-            style="background: linear-gradient(135deg, #1E293B, #334155); display: flex; align-items: center; justify-content: center;">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" opacity="0.9">
-              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-              <line x1="12" y1="18" x2="12.01" y2="18" />
-            </svg>
-          </div>
-          <div class="service-card-banner">
-            <h3>تطبيقات الجوال والويب</h3>
-          </div>
-          <div class="service-card-body">
-            <p>تصميم وتطوير تطبيقات الجوال (iOS & Android) ومنصات الويب المخصصة بأحدث التقنيات مثل React Native وFlutter
-              وLaravel.</p>
-            <a href="#contact" class="btn btn-outline">طلب عرض سعر</a>
-          </div>
-        </div>
-
-        <!-- Service 5: CyberSecurity -->
-        <div class="service-card animate-on-scroll delay-2">
-          <div class="service-card-image"
-            style="background: linear-gradient(135deg, #006C35, #004D27); display: flex; align-items: center; justify-content: center;">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" opacity="0.9">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <path d="M9 12l2 2 4-4" />
-            </svg>
-          </div>
-          <div class="service-card-banner">
-            <h3>الأمن السيبراني والحماية</h3>
-          </div>
-          <div class="service-card-body">
-            <p>حلول أمن سيبراني متكاملة تشمل اختبارات الاختراق، حماية البيانات، تشفير الاتصالات، والامتثال لضوابط الهيئة
-              الوطنية للأمن السيبراني (NCA).</p>
-            <a href="#contact" class="btn btn-outline">طلب عرض سعر</a>
-          </div>
-        </div>
-
-        <!-- Service 6: Custom Systems -->
-        <div class="service-card animate-on-scroll delay-3">
-          <div class="service-card-image"
-            style="background: linear-gradient(135deg, #0B8457, #006C35); display: flex; align-items: center; justify-content: center;">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" opacity="0.9">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-              <line x1="14" y1="4" x2="10" y2="20" />
-            </svg>
-          </div>
-          <div class="service-card-banner">
-            <h3>أنظمة مخصصة حسب الطلب</h3>
-          </div>
-          <div class="service-card-body">
-            <p>تطوير أنظمة برمجية مخصصة بالكامل حسب متطلبات مشروعك: أنظمة إدارة المستشفيات، المدارس، العقارات، أو أي
-              قطاع تخصصي آخر.</p>
-            <a href="#contact" class="btn btn-outline">طلب عرض سعر</a>
-          </div>
-        </div>
+        <!-- Carousel Pagination Dots -->
+        <div class="projects-carousel-dots" id="projCarouselDots"></div>
       </div>
     </div>
   </section>
@@ -649,7 +928,7 @@
   <!-- ═══════════════════════════════════════════
        9. FAQ
        ═══════════════════════════════════════════ -->
-  <section class="faq" id="faq">
+  <!-- <section class="faq" id="faq">
     <div class="container">
       <div class="section-header animate-on-scroll">
         <div class="section-label">الأسئلة الشائعة</div>
@@ -749,7 +1028,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- ═══════════════════════════════════════════
@@ -757,20 +1036,104 @@
        ═══════════════════════════════════════════ -->
   <section class="partners" id="partners">
     <div class="container">
-      <div class="section-header animate-on-scroll">
+      <div class="section-header animate-on-scroll" style="margin-bottom: 16px;">
         <div class="section-label">شركاء النجاح</div>
-        <h2 class="section-title">يثقون في حلولنا التقنية</h2>
       </div>
 
-      <div class="partners-logos animate-on-scroll">
-        <div class="partner-logo">مجموعة الوفاء</div>
-        <div class="partner-logo">شركة رواد التقنية</div>
-        <div class="partner-logo">متجر بلوم</div>
-        <div class="partner-logo">مستشفى الأمل</div>
-        <div class="partner-logo">مجموعة النخبة</div>
-        <div class="partner-logo">شركة المسار</div>
-        <div class="partner-logo">مؤسسة البناء</div>
-        <div class="partner-logo">شركة الريادة</div>
+      <!-- Partners Carousel -->
+      <div class="partners-carousel-wrapper animate-on-scroll">
+        <!-- Side Navigation Arrows -->
+        <button class="partner-side-arrow prev" id="partnerPrevBtn" aria-label="الشريك السابق">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="partner-side-arrow next" id="partnerNextBtn" aria-label="الشريك التالي">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <!-- Viewport & Track -->
+        <div class="partners-carousel-viewport" id="partnerCarouselViewport">
+          <div class="partners-carousel-track" id="partnerCarouselTrack">
+
+            <!-- Partner 1 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-1.png" alt="شريك النجاح - درة الجمان" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 2 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-2.png" alt="شريك النجاح - مجموعة الوفاء" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 3 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-3.png" alt="شريك النجاح - مسار التقنية" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 4 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-4.png" alt="شريك النجاح - مستشفى الأمل" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 5 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-5.png" alt="شريك النجاح - مجموعة العمار" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 6 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-6.png" alt="شريك النجاح - الزايدي" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 7 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-7.png" alt="شريك النجاح - الوطني المهيدب" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 8 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/new-8.png" alt="شريك النجاح - الخليجية للتصنيع" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 9 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-10.png" alt="شريك النجاح - الراجحي للألمنيوم" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 10 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-11.png" alt="شريك النجاح - بلوم" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Partner 11 -->
+            <div class="partner-carousel-card">
+              <div class="partner-card-logo-only">
+                <img src="assets/partners/New-Project.png" alt="شريك النجاح" loading="lazy">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
