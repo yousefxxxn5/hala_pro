@@ -140,13 +140,19 @@ h6 {
               visibility 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
+  animation: preloaderCssSafetyFallback 0.8s ease 3.6s forwards;
 }
 
 .page-preloader.loaded {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: scale(1.08);
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: scale(1.08) !important;
+}
+
+@keyframes preloaderCssSafetyFallback {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 
 /* Ambient Radial Glow */

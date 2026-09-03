@@ -61,6 +61,38 @@
     </div>
   </div>
 
+  <!-- Preloader Safe Auto-Dismiss Script -->
+  <script>
+    (function () {
+      var preloader = document.getElementById('page-preloader');
+      if (!preloader) return;
+      var startTime = Date.now();
+      var displayDuration = 1800; // 1.8 ثانية مريحة وأنيقة
+
+      function hidePreloader() {
+        if (!preloader || preloader.classList.contains('loaded')) return;
+        preloader.classList.add('loaded');
+        setTimeout(function () {
+          if (preloader && preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+          }
+        }, 850);
+      }
+
+      if (document.readyState === 'complete') {
+        setTimeout(hidePreloader, displayDuration);
+      } else {
+        window.addEventListener('load', function () {
+          var elapsed = Date.now() - startTime;
+          setTimeout(hidePreloader, Math.max(0, displayDuration - elapsed));
+        });
+      }
+
+      // مؤقت أمان إجباري نهائي
+      setTimeout(hidePreloader, 3200);
+    })();
+  </script>
+
   <!-- ═══════════════════════════════════════════
        1. NAVBAR
        ═══════════════════════════════════════════ -->

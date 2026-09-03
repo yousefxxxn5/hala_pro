@@ -5,6 +5,21 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // ─── 0. Safe Preloader Dismissal Handler ───
+  const preloaderEl = document.getElementById('page-preloader');
+  if (preloaderEl) {
+    setTimeout(function () {
+      if (preloaderEl && !preloaderEl.classList.contains('loaded')) {
+        preloaderEl.classList.add('loaded');
+        setTimeout(function () {
+          if (preloaderEl.parentNode) {
+            preloaderEl.parentNode.removeChild(preloaderEl);
+          }
+        }, 850);
+      }
+    }, 2000);
+  }
+
   // ─── 1. Sticky Navbar with scroll effect ───
   const navbar = document.querySelector('.navbar');
   const scrollTopBtn = document.querySelector('.scroll-top');
