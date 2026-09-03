@@ -1557,11 +1557,24 @@ h6 {
 }
 
 .proj-card-sector {
-  display: inline-block;
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
   font-weight: 700;
   color: var(--c-green-dark);
+  background: rgba(0, 108, 53, 0.07);
+  padding: 4px 11px;
+  border-radius: var(--radius-full);
   margin-bottom: 8px;
+  width: fit-content;
+}
+
+.proj-card-sector svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--c-green-dark);
+  flex-shrink: 0;
 }
 
 .proj-card-title {
